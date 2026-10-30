@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Minecraft Rus";
+    src: url("../fonts/minecraft-rus.ttf")
+    format("truetype");
+    font-display: swap;
+}
+
+h1, h2, h3 {
+    font-family: "Minecraft Rus", monospace;
+}
+
