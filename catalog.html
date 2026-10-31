@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лавка — LightWorld</title>
+    <meta name="description" content="Лавка сервера LightWorld: проходки, наборы, люмены и косметика.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" aria-label="Основная навигация">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.png" alt="" width="40" height="40">
+                    LightWorld
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Донат</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Лаунчер</a></li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-light" href="order.html">Корзина <span class="badge text-bg-warning" id="cart-count" hidden>0</span></a>
+                        <a class="btn btn-primary" href="contacts.html">Начать играть</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-5">
+        <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Донат</li>
+            </ol>
+        </nav>
+        <h1 class="mb-2">Лавка</h1>
+        <p class="lead mb-4">Только косметика и удобства. Покупки поддерживают сервер и не дают преимущества в игре.</p>
+        <div class="row g-4">
+            <aside class="col-12 col-lg-3" aria-label="Фильтры">
+                <form class="card card-body" id="filters" action="#" method="get">
+                    <div class="mb-3">
+                        <label class="form-label" for="filter-search">Поиск</label>
+                        <input class="form-control" id="filter-search" name="search" type="search" placeholder="Например, плащ">
+                    </div>
+                    <fieldset class="mb-3">
+                        <legend class="form-label fs-6">Категория</legend>
+                        <div class="form-check">
+                            <input class="form-check-input" id="cat-all" type="radio" name="category" value="all" checked>
+                            <label class="form-check-label" for="cat-all">Все товары</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="cat-pass" type="radio" name="category" value="pass">
+                            <label class="form-check-label" for="cat-pass">Проходки</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="cat-kit" type="radio" name="category" value="kit">
+                            <label class="form-check-label" for="cat-kit">Наборы</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="cat-currency" type="radio" name="category" value="currency">
+                            <label class="form-check-label" for="cat-currency">Люмены</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="cat-cosmetic" type="radio" name="category" value="cosmetic">
+                            <label class="form-check-label" for="cat-cosmetic">Косметика</label>
+                        </div>
+                    </fieldset>
+                    <div class="mb-3">
+                        <label class="form-label" for="filter-sort">Сортировка</label>
+                        <select class="form-select" id="filter-sort" name="sort">
+                            <option value="default">По умолчанию</option>
+                            <option value="cheap">Сначала дешёвые</option>
+                            <option value="expensive">Сначала дорогие</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline-light" type="reset">Сбросить</button>
+                </form>
+            </aside>
+            <section class="col-12 col-lg-9" aria-label="Товары">
+                <div class="row g-4" id="catalog-grid">
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="pass" data-price="399">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/trial-key.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Проходка «Навсегда»</h2>
+                                <span class="badge text-bg-warning align-self-start mb-2">Хит</span>
+                                <p class="card-text">Доступ ко всем режимам без срока действия.</p>
+                                <p class="fw-bold mt-auto">399 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="pass-forever" data-cart-name="Проходка «Навсегда»" data-cart-price="399">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="pass" data-price="149">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/ender-pearl.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Проходка «Сезон»</h2>
+                                <p class="card-text">Доступ ко всем режимам до конца текущего сезона.</p>
+                                <p class="fw-bold mt-auto">149 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="pass-season" data-cart-name="Проходка «Сезон»" data-cart-price="149">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="kit" data-price="640">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/bundle.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Набор «Новичок»</h2>
+                                <span class="badge text-bg-warning align-self-start mb-2">-53%</span>
+                                <p class="card-text">Инструменты, еда и кровать для первого дня. <a href="product.html">Подробнее</a></p>
+                                <p class="fw-bold mt-auto">640 руб. <s class="fw-normal text-body-secondary">1360</s></p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="kit-novice" data-cart-name="Набор «Новичок»" data-cart-price="640">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="kit" data-price="990">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/brick.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Набор «Строитель»</h2>
+                                <span class="badge text-bg-warning align-self-start mb-2">Новое</span>
+                                <p class="card-text">Блоки и декор для первого дома.</p>
+                                <p class="fw-bold mt-auto">990 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="kit-builder" data-cart-name="Набор «Строитель»" data-cart-price="990">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="currency" data-price="99">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/glowstone-dust.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Люмены: Горсть</h2>
+                                <p class="card-text">100 люменов, внутриигровая валюта для косметики.</p>
+                                <p class="fw-bold mt-auto">99 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="lumens-100" data-cart-name="Люмены: Горсть" data-cart-price="99">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="cosmetic" data-price="249">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/firework-star.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Частицы «Звёздная пыль»</h2>
+                                <p class="card-text">Мерцающий след за персонажем.</p>
+                                <p class="fw-bold mt-auto">249 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="particles" data-cart-name="Частицы «Звёздная пыль»" data-cart-price="249">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="cosmetic" data-price="199">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/feather.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Перо LightWorld</h2>
+                                <p class="card-text">Украшение на шляпу в цветах сервера.</p>
+                                <p class="fw-bold mt-auto">199 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="feather" data-cart-name="Перо LightWorld" data-cart-price="199">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4 js-product" data-category="cosmetic" data-price="299">
+                        <article class="card h-100">
+                            <div class="card-body d-flex flex-column">
+                                <img class="mb-3" src="images/icons/elytra.png" alt="" width="64" height="64">
+                                <h2 class="card-title h5">Плащ «Закат»</h2>
+                                <p class="card-text">Плащ с тёплым градиентом и золотой каймой.</p>
+                                <p class="fw-bold mt-auto">299 руб.</p>
+                                <button class="btn btn-primary btn-sm" type="button" data-cart-id="cape" data-cart-name="Плащ «Закат»" data-cart-price="299">В корзину</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="alert alert-warning mt-4" id="catalog-empty" role="alert" hidden>Ничего не нашлось. Попробуй другую категорию или запрос.</div>
+            </section>
+        </div>
+    </main>
+    <footer class="py-4 border-top">
+        <div class="container d-flex flex-wrap justify-content-between gap-2">
+            <span>© 2026 LightWorld.</span>
+            <span>Соколов Г. А., ЭФБО-12-25</span>
+        </div>
+    </footer>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="cart-toast" role="status" aria-live="polite" aria-atomic="true">
+            <div class="toast-body" id="cart-toast-text">Добавлено в корзину</div>
+        </div>
+    </div>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

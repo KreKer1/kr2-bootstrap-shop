@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости — LightWorld</title>
+    <meta name="description" content="Новости сервера LightWorld: обновления, ивенты, правила и анонсы.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" aria-label="Основная навигация">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.png" alt="" width="40" height="40">
+                    LightWorld
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="news.html">Новости</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog.html">Донат</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Лаунчер</a></li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-light" href="order.html">Корзина <span class="badge text-bg-warning" id="cart-count" hidden>0</span></a>
+                        <a class="btn btn-primary" href="contacts.html">Начать играть</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-5">
+        <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Новости</li>
+            </ol>
+        </nav>
+        <h1 class="mb-2">Новости</h1>
+        <p class="lead mb-4">Обновления, ивенты и изменения правил. Самые свежие записи сверху.</p>
+        <div class="nav nav-pills flex-wrap gap-2 mb-4" role="group" aria-label="Тип новостей">
+            <button class="nav-link active" type="button" data-tag="all" aria-pressed="true">Все</button>
+            <button class="nav-link" type="button" data-tag="update" aria-pressed="false">Обновления</button>
+            <button class="nav-link" type="button" data-tag="event" aria-pressed="false">Ивенты</button>
+            <button class="nav-link" type="button" data-tag="rules" aria-pressed="false">Правила</button>
+            <button class="nav-link" type="button" data-tag="announce" aria-pressed="false">Анонсы</button>
+        </div>
+        <div class="row g-4">
+            <div class="col-12 js-post" data-tag="update">
+                <article class="card" id="beta">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/experience-bottle.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-10-10">10.10.2026</time> <span class="badge text-bg-success">Обновление</span></p>
+                            <h2 class="card-title h4">Открыт бета-тест выживания</h2>
+                            <p class="card-text">Сервер открыт для всех желающих. Первые 100 игроков получат значок основателя, он останется на профиле навсегда.</p>
+                            <p class="card-text">Заходи через лаунчер и пиши отзывы в Discord, в канале «бета-тест». От них зависит, что поменяется до релиза.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 js-post" data-tag="event">
+                <article class="card" id="build">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/firework-rocket.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-10-07">07.10.2026</time> <span class="badge text-bg-warning">Ивент</span></p>
+                            <h2 class="card-title h4">Конкурс построек «Осень»</h2>
+                            <p class="card-text">В субботу в 20:00 по Москве стартует конкурс построек. Тема — осень, на работу даётся неделя.</p>
+                            <p class="card-text">Три лучшие постройки получат косметику из лавки и попадут в трейлер сервера. Остальным участникам — набор «Новичок» в подарок.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 js-post" data-tag="rules">
+                <article class="card" id="rules">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/writable-book.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-10-02">02.10.2026</time> <span class="badge text-bg-secondary">Правила</span></p>
+                            <h2 class="card-title h4">Обновили правила сервера</h2>
+                            <p class="card-text">Уточнили пункты про постройки возле спавна: теперь в радиусе 200 блоков строить можно только с разрешения модераторов.</p>
+                            <p class="card-text">Торговля через рынок стала обязательной для сделок дороже 64 люменов. Полный текст правил закреплён в Discord.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 js-post" data-tag="announce">
+                <article class="card" id="anarchy">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/goat-horn.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-09-28">28.09.2026</time> <span class="badge text-bg-info">Анонс</span></p>
+                            <h2 class="card-title h4">Анонс режима «Анархия»</h2>
+                            <p class="card-text">Режим без правил и приватов появится после релиза выживания. Отдельный мир, отдельный прогресс.</p>
+                            <p class="card-text">Следи за новостями в Telegram: там первыми появятся даты закрытого теста.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 js-post" data-tag="update">
+                <article class="card" id="launcher">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/experience-bottle.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-09-20">20.09.2026</time> <span class="badge text-bg-success">Обновление</span></p>
+                            <h2 class="card-title h4">Вышел лаунчер v0.1</h2>
+                            <p class="card-text">Лаунчер сам скачивает нужную версию Minecraft, ставит моды и подключает к серверу.</p>
+                            <p class="card-text">Пока только для Windows. Версии для macOS и Linux в работе.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 js-post" data-tag="announce">
+                <article class="card" id="start">
+                    <div class="card-body d-flex flex-column flex-md-row gap-3">
+                        <img class="align-self-start" src="images/icons/goat-horn.png" alt="" width="64" height="64">
+                        <div>
+                            <p class="text-body-secondary mb-1"><time datetime="2026-09-12">12.09.2026</time> <span class="badge text-bg-info">Анонс</span></p>
+                            <h2 class="card-title h4">LightWorld: начало</h2>
+                            <p class="card-text">Мы начинаем строить свой сервер. Без доната за силу, с честной экономикой и решениями вместе с игроками.</p>
+                            <p class="card-text">Здесь будут все новости сервера. Добро пожаловать.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="py-4 border-top">
+        <div class="container d-flex flex-wrap justify-content-between gap-2">
+            <span>© 2026 LightWorld.</span>
+            <span>Соколов Г. А., ЭФБО-12-25</span>
+        </div>
+    </footer>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина и заявка — LightWorld</title>
+    <meta name="description" content="Корзина и оформление заявки на сервере LightWorld.">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom" aria-label="Основная навигация">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.png" alt="" width="40" height="40">
+                    LightWorld
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalog.html">Донат</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Лаунчер</a></li>
+                    </ul>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-light active" aria-current="page" href="order.html">Корзина <span class="badge text-bg-warning" id="cart-count" hidden>0</span></a>
+                        <a class="btn btn-primary" href="contacts.html">Начать играть</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-5">
+        <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item"><a href="catalog.html">Донат</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+            </ol>
+        </nav>
+        <h1 class="mb-2">Корзина</h1>
+        <p class="lead mb-4">Проверь товары и заполни форму. Все поля, кроме комментария, обязательные.</p>
+        <div class="row g-4">
+            <section class="col-12 col-lg-5" aria-label="Товары в корзине">
+                <div class="alert alert-secondary" id="cart-empty" role="alert">Корзина пуста. <a class="alert-link" href="catalog.html">Перейти в лавку</a></div>
+                <ul class="list-group mb-3" id="cart-list" hidden></ul>
+                <p class="fs-5 fw-bold" id="cart-total-row" hidden>Итого: <span id="cart-total">0</span> руб.</p>
+            </section>
+            <section class="col-12 col-lg-7" aria-label="Оформление заявки">
+                <div class="card card-body">
+                    <h2 class="h4 mb-3">Оформление</h2>
+                    <form class="js-order-form" action="#" method="post" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="order-name">Имя</label>
+                                <input class="form-control" id="order-name" name="name" type="text" required minlength="2" placeholder="Алексей">
+                                <div class="invalid-feedback">Минимум 2 символа.</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="order-nick">Ник в игре</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input class="form-control" id="order-nick" name="nick" type="text" required pattern="[A-Za-z0-9_]{3,16}" placeholder="Steve_2026">
+                                    <div class="invalid-feedback">От 3 до 16 символов: латиница, цифры и подчёркивание.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="order-email">E-mail</label>
+                                <input class="form-control" id="order-email" name="email" type="email" required placeholder="steve@mail.ru">
+                                <div class="invalid-feedback">Укажи корректный e-mail.</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="order-phone">Телефон</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">+7</span>
+                                    <input class="form-control" id="order-phone" name="phone" type="tel" required pattern="[0-9]{10}" placeholder="9001234567">
+                                    <div class="invalid-feedback">Нужно 10 цифр после +7.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="order-topic">Тема заявки</label>
+                                <select class="form-select" id="order-topic" name="topic" required>
+                                    <option value="">Выбери тему</option>
+                                    <option value="buy">Покупка товаров из корзины</option>
+                                    <option value="gift">Подарок другому игроку</option>
+                                    <option value="question">Вопрос по заказу</option>
+                                </select>
+                                <div class="invalid-feedback">Выбери тему заявки.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="order-comment">Комментарий</label>
+                                <textarea class="form-control" id="order-comment" name="comment" rows="3" placeholder="Например, подарок другу Alex_99"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" id="order-agree" name="agree" type="checkbox" required>
+                                    <label class="form-check-label" for="order-agree">Согласен на обработку персональных данных и с правилами сервера</label>
+                                    <div class="invalid-feedback">Без согласия заявку не отправить.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap gap-2">
+                                <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                                <a class="btn btn-outline-light" href="catalog.html">Продолжить покупки</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-success mb-0 js-order-success" role="alert" hidden>Заявка отправлена! Мы пришлём подтверждение на почту.</div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="py-4 border-top">
+        <div class="container d-flex flex-wrap justify-content-between gap-2">
+            <span>© 2026 LightWorld.</span>
+            <span>Соколов Г. А., ЭФБО-12-25</span>
+        </div>
+    </footer>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

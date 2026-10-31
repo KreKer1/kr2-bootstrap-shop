@@ -27,7 +27,10 @@
                         <li class="nav-item"><a class="nav-link" href="catalog.html">Донат</a></li>
                         <li class="nav-item"><a class="nav-link" href="contacts.html">Лаунчер</a></li>
                     </ul>
-                    <a class="btn btn-primary" href="contacts.html">Начать играть</a>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-light" href="order.html">Корзина <span class="badge text-bg-warning" id="cart-count" hidden>0</span></a>
+                        <a class="btn btn-primary" href="contacts.html">Начать играть</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -55,6 +58,43 @@
                 </div>
             </div>
         </section>
+    <section class="py-5 bg-body-tertiary" id="news">
+        <div class="container">
+            <h2 class="mb-4">Последние новости</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-success mb-2">Обновление</span>
+                            <h3 class="card-title h5">Открыт бета-тест выживания</h3>
+                            <p class="card-text text-body-secondary">10.10.2026</p>
+                            <a class="btn btn-outline-light btn-sm" href="news.html#beta">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-warning mb-2">Ивент</span>
+                            <h3 class="card-title h5">Конкурс построек «Осень»</h3>
+                            <p class="card-text text-body-secondary">07.10.2026</p>
+                            <a class="btn btn-outline-light btn-sm" href="news.html#build">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-2">Правила</span>
+                            <h3 class="card-title h5">Обновили правила сервера</h3>
+                            <p class="card-text text-body-secondary">02.10.2026</p>
+                            <a class="btn btn-outline-light btn-sm" href="news.html#rules">Читать далее</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="py-5" id="features">
         <div class="container">
             <h2 class="mb-4">Что ждёт тебя на сервере</h2>
@@ -122,8 +162,216 @@
             </div>
         </div>
     </section>
-    
+    <section class="py-5 bg-body-tertiary" id="shop">
+        <div class="container">
+            <h2 class="mb-2">Донат не продаёт победу</h2>
+            <p class="mb-4">Покупки поддерживают хостинг и разработку, но не дают преимущества в игре.</p>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <img class="mb-3" src="images/icons/elytra.png" alt="" width="64" height="64">
+                            <h3 class="card-title h5">Плащ «Закат»</h3>
+                            <p class="card-text">Плащ с тёплым градиентом и золотой каймой.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="fw-bold">299 руб.</span>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Плащ «Закат»">Заказать</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <img class="mb-3" src="images/icons/firework-star.png" alt="" width="64" height="64">
+                            <h3 class="card-title h5">Частицы «Звёздная пыль»</h3>
+                            <span class="badge text-bg-warning align-self-start mb-2">Новое</span>
+                            <p class="card-text">Мерцающий след за персонажем.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="fw-bold">249 руб.</span>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Частицы «Звёздная пыль»">Заказать</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <img class="mb-3" src="images/icons/feather.png" alt="" width="64" height="64">
+                            <h3 class="card-title h5">Перо LightWorld</h3>
+                            <p class="card-text">Украшение на шляпу в цветах сервера.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <span class="fw-bold">199 руб.</span>
+                                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Перо LightWorld">Заказать</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <a class="btn btn-outline-light mt-4" href="catalog.html">Открыть всю лавку</a>
+        </div>
+    </section>
+    <section class="py-5" id="modes">
+        <div class="container">
+            <h2 class="mb-4">Один лаунчер, четыре мира</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <img src="images/icons/diamond-pickaxe.png" alt="" width="48" height="48">
+                                <span class="badge text-bg-success">Открыт</span>
+                            </div>
+                            <h3 class="card-title h5">Выживание</h3>
+                            <p class="card-text">Основной режим: ванильное выживание с экономикой игроков и защитой построек.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <img src="images/icons/tnt-minecart.png" alt="" width="48" height="48">
+                                <span class="badge text-bg-warning">Скоро</span>
+                            </div>
+                            <h3 class="card-title h5">Анархия</h3>
+                            <p class="card-text">Без правил и приватов. Отдельный мир и отдельный прогресс для тех, кто любит риск.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <img src="images/icons/bow.png" alt="" width="48" height="48">
+                                <span class="badge text-bg-warning">Скоро</span>
+                            </div>
+                            <h3 class="card-title h5">Мини-игры</h3>
+                            <p class="card-text">Короткие матчи на 5–15 минут, чтобы отдохнуть от выживания и поиграть с друзьями.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <img src="images/icons/painting.png" alt="" width="48" height="48">
+                                <span class="badge text-bg-secondary">В планах</span>
+                            </div>
+                            <h3 class="card-title h5">Креатив</h3>
+                            <p class="card-text">Плоский мир и участки для строительства без ограничений по блокам и ресурсам.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-body-tertiary" id="faq">
+        <div class="container">
+            <h2 class="mb-4">Частые вопросы</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Какая версия игры нужна?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse show" id="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Minecraft Java Edition 26.2. Лаунчер сам скачает нужную версию, ничего настраивать вручную не придётся.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Играть можно бесплатно?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Да. Все режимы доступны без вложений, а в лавке продаются только косметика и удобства.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Можно ли играть с модами?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="faq3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Клиентские моды на оптимизацию и интерфейс разрешены. Читы и моды, которые дают преимущество, запрещены правилами.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Как связаться с администрацией?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="faq4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Напиши в Discord в канал поддержки или модератору прямо в игре командой /report.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
+    <footer class="py-4 border-top">
+        <div class="container d-flex flex-wrap justify-content-between gap-2">
+            <span>© 2026 LightWorld.</span>
+            <span>Соколов Г. А., ЭФБО-12-25</span>
+        </div>
+    </footer>
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="orderModalTitle">Заявка на покупку</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="js-order-form" action="#" method="post" novalidate>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label" for="modal-product">Товар</label>
+                                <select class="form-select" id="modal-product" name="product" required>
+                                    <option value="">Выбери товар</option>
+                                    <option>Плащ «Закат»</option>
+                                    <option>Частицы «Звёздная пыль»</option>
+                                    <option>Перо LightWorld</option>
+                                </select>
+                                <div class="invalid-feedback">Выбери товар.</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="modal-name">Имя</label>
+                                <input class="form-control" id="modal-name" name="name" type="text" required minlength="2" placeholder="Алексей">
+                                <div class="invalid-feedback">Минимум 2 символа.</div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="modal-email">E-mail</label>
+                                <input class="form-control" id="modal-email" name="email" type="email" required placeholder="steve@mail.ru">
+                                <div class="invalid-feedback">Укажи корректный e-mail.</div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="modal-phone">Телефон</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">+7</span>
+                                    <input class="form-control" id="modal-phone" name="phone" type="tel" required pattern="[0-9]{10}" placeholder="9001234567">
+                                    <div class="invalid-feedback">Нужно 10 цифр после +7.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label" for="modal-comment">Комментарий</label>
+                                <textarea class="form-control" id="modal-comment" name="comment" rows="2" placeholder="Например, подарок другу Alex_99"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" id="modal-agree" name="agree" type="checkbox" required>
+                                    <label class="form-check-label" for="modal-agree">Согласен на обработку персональных данных</label>
+                                    <div class="invalid-feedback">Без согласия заявку не отправить.</div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex flex-wrap gap-2">
+                                <button class="btn btn-primary" type="submit">Отправить заявку</button>
+                                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отмена</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-success mb-0 js-order-success" role="alert" hidden>Заявка отправлена! Мы пришлём подтверждение на почту.</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script
     src="vendor/bootstrap/js/bootstrap.bundle.min.js">
     </script>
