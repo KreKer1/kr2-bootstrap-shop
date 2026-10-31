@@ -207,6 +207,22 @@ tagButtons.forEach(function (button) {
     });
 });
 
+const revealItems = document.querySelectorAll('main h2, main .card, main .accordion, main .table-responsive');
+
+const revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('reveal--visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+revealItems.forEach(function (item) {
+    item.classList.add('reveal');
+    revealObserver.observe(item);
+});
+
 const ipCopy = document.getElementById('ip-copy');
 
 if (ipCopy) {
