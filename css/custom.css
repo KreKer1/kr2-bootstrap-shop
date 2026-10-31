@@ -16,3 +16,28 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center;
 }
+
+[data-bs-theme="dark"] {
+    --bs-link-color-rgb: 63, 181, 165;
+    --bs-link-hover-color-rgb: 95, 207, 192;
+}
+
+.btn-primary {
+    --bs-btn-color: #0b1211;
+    --bs-btn-bg: #3fb5a5;
+    --bs-btn-border-color: #3fb5a5;
+    --bs-btn-hover-color: #0b1211;
+    --bs-btn-hover-bg: #5fcfc0;
+    --bs-btn-hover-border-color: #5fcfc0;
+    --bs-btn-active-color: #0b1211;
+    --bs-btn-active-bg: #339688;
+    --bs-btn-active-border-color: #339688;
+    --bs-btn-disabled-color: #0b1211;
+    --bs-btn-disabled-bg: #3fb5a5;
+    --bs-btn-disabled-border-color: #3fb5a5;
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-color: #0b1211;
+    --bs-nav-pills-link-active-bg: #3fb5a5;
+}
