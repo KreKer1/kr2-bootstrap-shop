@@ -207,7 +207,7 @@ tagButtons.forEach(function (button) {
     });
 });
 
-const revealItems = document.querySelectorAll('main h2, main .card, main .accordion, main .table-responsive');
+const revealItems = document.querySelectorAll('[data-reveal]');
 
 const revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

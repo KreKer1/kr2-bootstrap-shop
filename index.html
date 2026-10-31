@@ -15,7 +15,7 @@
                 <a class="navbar-brand d-flex align-items-center gap-2"
                 href="index.html">
                     <img src="images/logo.png" alt="" width="40" height="40">
-                        LightWorld
+                        <span>LIGHT<span class="brand-accent">WORLD</span></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
                     <span class="navbar-toggler-icon"></span>
@@ -36,71 +36,74 @@
         </nav>
     </header>
     <main>
-        <section class="py-5" id="hero">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-7">
-                        <p class="text-success mb-3">Онлайн: 9999 игроков · бета-тест</p>
-                        <h1 class="mb-3">
-                                <img class="img-fluid" src="images/title.png" alt="LightWorld" width="2048" height="320">
-                        </h1>
-                        <p class="lead mb-4">Супер дупер мега ультра не честное выживание где вас сразу же укокошат за пределами спавна</p>
-                        <div class="d-flex flex-wrap gap-2 mb-4">
-                            <a class="btn btn-primary btn-lg" href="contacts.html">Начать играть</a>
-                            <button class="btn btn-outline-light btn-lg" type="button" id="ip-copy">play.lightworld.su</button>
+        <section id="hero">
+        <div class="container pt-4">
+            <div class="row g-3" role="region" aria-label="Последние новости" id="news">
+                <div class="col-12 col-lg-4">
+                    <article class="card h-100 hero-news">
+                        <div class="card-body d-flex gap-3">
+                            <img class="hero-news-icon" src="images/icons/experience-bottle.png" alt="" width="48" height="48">
+                            <div>
+                                <p class="hero-news-meta mb-1"><time datetime="2026-10-10">10.10</time> · Обновление</p>
+                                <p class="hero-news-title mb-1">Открыт бета-тест выживания</p>
+                                <a class="hero-link" href="news.html#beta">Читать далее</a>
+                            </div>
                         </div>
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item"><img src="images/icons/grass-block.png" alt="" width="16" height="16"> Java 26.2</li>
-                            <li class="list-inline-item"><img src="images/icons/ender-eye.png" alt="" width="16" height="16"> Свой лаунчер</li>
-                            <li class="list-inline-item"><img src="images/icons/emerald.png" alt="" width="16" height="16"> Играть бесплатно</li>
-                        </ul>
-                    </div>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <article class="card h-100 hero-news">
+                        <div class="card-body d-flex gap-3">
+                            <img class="hero-news-icon" src="images/icons/firework-rocket.png" alt="" width="48" height="48">
+                            <div>
+                                <p class="hero-news-meta mb-1"><time datetime="2026-10-07">07.10</time> · Ивент</p>
+                                <p class="hero-news-title mb-1">Конкурс построек «Осень»</p>
+                                <a class="hero-link" href="news.html#build">Читать далее</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <article class="card h-100 hero-news">
+                        <div class="card-body d-flex gap-3">
+                            <img class="hero-news-icon" src="images/icons/writable-book.png" alt="" width="48" height="48">
+                            <div>
+                                <p class="hero-news-meta mb-1"><time datetime="2026-10-02">02.10</time> · Правила</p>
+                                <p class="hero-news-title mb-1">Обновили правила сервера</p>
+                                <a class="hero-link" href="news.html#rules">Читать далее</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </section>
-    <section class="py-5 bg-body-tertiary" id="news">
-        <div class="container">
-            <h2 class="mb-4">Последние новости</h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <article class="card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-success mb-2">Обновление</span>
-                            <h3 class="card-title h5">Открыт бета-тест выживания</h3>
-                            <p class="card-text text-body-secondary">10.10.2026</p>
-                            <a class="btn btn-outline-light btn-sm" href="news.html#beta">Читать далее</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-4">
-                    <article class="card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-warning mb-2">Ивент</span>
-                            <h3 class="card-title h5">Конкурс построек «Осень»</h3>
-                            <p class="card-text text-body-secondary">07.10.2026</p>
-                            <a class="btn btn-outline-light btn-sm" href="news.html#build">Читать далее</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-4">
-                    <article class="card h-100">
-                        <div class="card-body">
-                            <span class="badge text-bg-secondary mb-2">Правила</span>
-                            <h3 class="card-title h5">Обновили правила сервера</h3>
-                            <p class="card-text text-body-secondary">02.10.2026</p>
-                            <a class="btn btn-outline-light btn-sm" href="news.html#rules">Читать далее</a>
-                        </div>
-                    </article>
+            <div class="row hero-body">
+                <div class="col-12 col-lg-7">
+                    <p class="hero-status mb-3"><img src="images/icons/ping.png" alt="" width="20" height="16"> <span class="hero-online">Онлайн:</span> 9999 игроков · бета-тест</p>
+                    <h1 class="mb-3">
+                        <img class="img-fluid" src="images/title.png" alt="LightWorld" width="2048" height="320">
+                    </h1>
+                    <p class="lead mb-4">Супер дупер мега ультра не честное выживание где вас сразу же укокошат за пределами спавна</p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <a class="btn btn-primary btn-lg" href="contacts.html">Начать играть</a>
+                        <button class="btn btn-outline-light btn-lg" type="button" id="ip-copy">play.lightworld.su</button>
+                    </div>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><img src="images/icons/grass-block.png" alt="" width="16" height="16"> Java 26.2</li>
+                        <li class="list-inline-item"><img src="images/icons/ender-eye.png" alt="" width="16" height="16"> Свой лаунчер</li>
+                        <li class="list-inline-item"><img src="images/icons/emerald.png" alt="" width="16" height="16"> Играть бесплатно</li>
+                    </ul>
+                    <a class="hero-link d-inline-block mt-4" href="#features">Что ждёт на сервере ↓</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5" id="features">
+    <section class="lw-section" id="features">
         <div class="container">
+            <p class="eyebrow mb-2">Почему LightWorld</p>
             <h2 class="mb-4">Что ждёт тебя на сервере</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/iron-pickaxe.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Ванильное выживание</h3>
@@ -110,7 +113,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/emerald.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Экономика игроков</h3>
@@ -120,7 +123,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/firework-rocket.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Ивенты каждую неделю</h3>
@@ -130,7 +133,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/bell.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Дружное сообщество</h3>
@@ -140,7 +143,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/iron-chestplate.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Защита построек</h3>
@@ -150,7 +153,7 @@
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100">
+                    <article class="card h-100" data-reveal>
                         <div class="card-body">
                             <img class="mb-3" src="images/icons/writable-book.png" alt="" width="64" height="64">
                             <h3 class="card-title h5">Поддержка рядом</h3>
@@ -162,19 +165,25 @@
             </div>
         </div>
     </section>
-    <section class="py-5 bg-body-tertiary" id="shop">
+    <section class="lw-section lw-section-alt" id="shop">
         <div class="container">
+            <p class="eyebrow mb-2">Честный донат</p>
             <h2 class="mb-2">Донат не продаёт победу</h2>
-            <p class="mb-4">Покупки поддерживают хостинг и разработку, но не дают преимущества в игре.</p>
+            <p class="section-text mb-4">Покупки поддерживают хостинг и разработку, но не дают преимущества в игре. Игрок без доната может всё то же, что и игрок с ним.</p>
+            <ul class="list-unstyled d-flex flex-wrap gap-3 mb-4">
+                <li class="d-flex align-items-center gap-2"><img src="images/icons/emerald.png" alt="" width="32" height="32"> Только косметика: плащи, частицы и украшения</li>
+                <li class="d-flex align-items-center gap-2"><img src="images/icons/trial-key.png" alt="" width="32" height="32"> Проходки открывают режимы, но не дают ресурсов</li>
+                <li class="d-flex align-items-center gap-2"><img src="images/icons/paper.png" alt="" width="32" height="32"> Цены одинаковые для всех, без скрытых платежей</li>
+            </ul>
             <div class="row g-4">
                 <div class="col-12 col-md-4">
                     <article class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <img class="mb-3" src="images/icons/elytra.png" alt="" width="64" height="64">
+                            <div class="product-art mb-3"><img src="images/icons/elytra.png" alt="" width="64" height="64"></div>
                             <h3 class="card-title h5">Плащ «Закат»</h3>
                             <p class="card-text">Плащ с тёплым градиентом и золотой каймой.</p>
                             <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <span class="fw-bold">299 руб.</span>
+                                <span class="product-price">299 руб.</span>
                                 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Плащ «Закат»">Заказать</button>
                             </div>
                         </div>
@@ -183,12 +192,11 @@
                 <div class="col-12 col-md-4">
                     <article class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <img class="mb-3" src="images/icons/firework-star.png" alt="" width="64" height="64">
+                            <div class="product-art mb-3"><span class="badge product-badge">Новое</span><img src="images/icons/firework-star.png" alt="" width="64" height="64"></div>
                             <h3 class="card-title h5">Частицы «Звёздная пыль»</h3>
-                            <span class="badge text-bg-warning align-self-start mb-2">Новое</span>
-                            <p class="card-text">Мерцающий след за персонажем.</p>
+                                                        <p class="card-text">Мерцающий след за персонажем.</p>
                             <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <span class="fw-bold">249 руб.</span>
+                                <span class="product-price">249 руб.</span>
                                 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Частицы «Звёздная пыль»">Заказать</button>
                             </div>
                         </div>
@@ -197,84 +205,92 @@
                 <div class="col-12 col-md-4">
                     <article class="card h-100">
                         <div class="card-body d-flex flex-column">
-                            <img class="mb-3" src="images/icons/feather.png" alt="" width="64" height="64">
+                            <div class="product-art mb-3"><img src="images/icons/feather.png" alt="" width="64" height="64"></div>
                             <h3 class="card-title h5">Перо LightWorld</h3>
                             <p class="card-text">Украшение на шляпу в цветах сервера.</p>
                             <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <span class="fw-bold">199 руб.</span>
+                                <span class="product-price">199 руб.</span>
                                 <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal" data-product="Перо LightWorld">Заказать</button>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
-            <a class="btn btn-outline-light mt-4" href="catalog.html">Открыть всю лавку</a>
+            <a class="btn btn-outline-light mt-4" href="catalog.html">Открыть всю лавку →</a>
         </div>
     </section>
-    <section class="py-5" id="modes">
+    <section class="lw-section" id="modes">
         <div class="container">
+            <p class="eyebrow mb-2">Режимы</p>
             <h2 class="mb-4">Один лаунчер, четыре мира</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <article class="card h-100">
-                        <div class="card-body">
+                    <article class="card h-100" data-reveal>
+                        <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <img src="images/icons/diamond-pickaxe.png" alt="" width="48" height="48">
                                 <span class="badge text-bg-success">Открыт</span>
                             </div>
                             <h3 class="card-title h5">Выживание</h3>
                             <p class="card-text">Основной режим: ванильное выживание с экономикой игроков и защитой построек.</p>
+                            <p class="mode-note mt-auto mb-0">Открыт для всех</p>
                         </div>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <article class="card h-100">
-                        <div class="card-body">
+                    <article class="card h-100" data-reveal>
+                        <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <img src="images/icons/tnt-minecart.png" alt="" width="48" height="48">
                                 <span class="badge text-bg-warning">Скоро</span>
                             </div>
                             <h3 class="card-title h5">Анархия</h3>
                             <p class="card-text">Без правил и приватов. Отдельный мир и отдельный прогресс для тех, кто любит риск.</p>
+                            <p class="mode-note mt-auto mb-0">Закрытый тест зимой</p>
                         </div>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <article class="card h-100">
-                        <div class="card-body">
+                    <article class="card h-100" data-reveal>
+                        <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <img src="images/icons/bow.png" alt="" width="48" height="48">
                                 <span class="badge text-bg-warning">Скоро</span>
                             </div>
                             <h3 class="card-title h5">Мини-игры</h3>
                             <p class="card-text">Короткие матчи на 5–15 минут, чтобы отдохнуть от выживания и поиграть с друзьями.</p>
+                            <p class="mode-note mt-auto mb-0">В разработке</p>
                         </div>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <article class="card h-100">
-                        <div class="card-body">
+                    <article class="card h-100" data-reveal>
+                        <div class="card-body d-flex flex-column">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <img src="images/icons/painting.png" alt="" width="48" height="48">
                                 <span class="badge text-bg-secondary">В планах</span>
                             </div>
                             <h3 class="card-title h5">Креатив</h3>
                             <p class="card-text">Плоский мир и участки для строительства без ограничений по блокам и ресурсам.</p>
+                            <p class="mode-note mt-auto mb-0">После релиза</p>
                         </div>
                     </article>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5 bg-body-tertiary" id="faq">
+    <section class="lw-section lw-section-alt" id="faq">
         <div class="container">
-            <h2 class="mb-4">Частые вопросы</h2>
+            <div class="text-center">
+                <p class="eyebrow mb-2">Вопросы</p>
+                <h2 class="mb-4">Частые вопросы</h2>
+            </div>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Какая версия игры нужна?</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">Какая версия игры нужна?</button>
                     </h3>
-                    <div class="accordion-collapse collapse show" id="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-collapse collapse" id="faq1" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">Minecraft Java Edition 26.2. Лаунчер сам скачает нужную версию, ничего настраивать вручную не придётся.</div>
                     </div>
                 </div>
@@ -296,10 +312,43 @@
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Как связаться с администрацией?</button>
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">Что будет с моими постройками?</button>
                     </h3>
                     <div class="accordion-collapse collapse" id="faq4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Постройки защищены регионами от гриферов, а логи блоков позволяют откатить любые разрушения по заявке в поддержку.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">Когда сервер выйдет из беты?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="faq5" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">Когда соберём отзывы и закроем найденные ошибки. Дата релиза появится в новостях и в Discord.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">Как связаться с администрацией?</button>
+                    </h3>
+                    <div class="accordion-collapse collapse" id="faq6" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">Напиши в Discord в канал поддержки или модератору прямо в игре командой /report.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lw-section" id="join">
+        <div class="container">
+            <div class="card join-card" data-reveal>
+                <div class="card-body d-flex flex-wrap justify-content-between align-items-center gap-4">
+                    <div class="join-text">
+                        <h2 class="mb-2">Присоединяйся к сообществу</h2>
+                        <p class="section-text mb-0">Новости, голосования за обновления и поиск команды. Заходи, чтобы не пропустить старт релиза.</p>
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <a class="btn btn-outline-light" href="#">Discord</a>
+                        <a class="btn btn-outline-light" href="#">Telegram</a>
+                        <a class="btn btn-primary btn-lg" href="contacts.html">Начать играть</a>
                     </div>
                 </div>
             </div>
